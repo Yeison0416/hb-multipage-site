@@ -1,5 +1,5 @@
+import '../node_modules/reset-css/_reset.scss'
+/* eslint-disable */
 import { Mainmenu } from './modules/main_menu'
-
-const nodeheader = document.querySelector('.js-btnmenu')
-
-new Mainmenu (nodeheader)
+/* eslint-disable */
+const mainmenu = new Mainmenu (document.querySelector('.menu-global'))

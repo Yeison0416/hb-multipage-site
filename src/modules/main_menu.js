@@ -1,15 +1,18 @@
 import './main_menu.scss'
+import template from './main_menu.pug'
+
+import datamenu from '../data/data_main_menu.json'
+
+console.log(datamenu)
 
 export class Mainmenu {
   constructor (node) {
-    this.node = node
-    this.nodemensage = document.querySelector('.js-mensage')
-    this.event()
+    this.nodemenu = node
+    this.usetemplate()
   }
 
-  event () {
-    this.node.addEventListener('click', () => {
-      this.nodemensage.innerHTML = 'funcionando'
-    })
+  usetemplate () {
+    console.log(template)
+    this.nodemenu.innerHTML = template(datamenu)
   }
 }
