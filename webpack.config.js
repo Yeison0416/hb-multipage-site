@@ -6,7 +6,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   entry: './src/main_index.js',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist')
