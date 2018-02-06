@@ -7,16 +7,26 @@ import datamenu from '../data/data_main_menu.json'
 
 export class Mainmenu {
   constructor (node) {
-    const openedmenu = document.querySelector('.container')
-    const header = document.querySelector('.header-global')
     this.node = node
-    this.trigger(openedmenu, header)
+    this.elements = {}
+    this.setElementsDom()
+    this.setEvents()
   }
 
-  trigger (openedmenu, header) {
-    this.node.addEventListener('click', () => {
-      header.classList.toggle('btn-pressed')
-      openedmenu.classList.toggle('opened-menu')
-    })
+  setElementsDom () {
+    this.elements.openedmenu = document.querySelector('.container')
+    this.elements.header = document.querySelector('.header-global')
+    this.elements.linkMenu = document.querySelector('.header-global__content-item')
+  }
+
+  setEvents () {
+    this.node.addEventListener('click', (this.eventsMenu.bind(this)))
+    this.elements.linkMenu.addEventListener('click', (this.eventsMenu.bind(this)))
+  }
+
+  eventsMenu () {
+    console.log('ok')
+    this.elements.header.classList.toggle('btn-pressed')
+    this.elements.openedmenu.classList.toggle('opened-menu')
   }
 }
