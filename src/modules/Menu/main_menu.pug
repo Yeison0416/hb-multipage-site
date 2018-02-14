@@ -1,0 +1,40 @@
+header(class='header-global') 
+  div(class='header-global__container') 
+    div(class='header-global__container-btnhamburger')
+      button(class='header-global__btnhamburger')
+        span(class='header-global__btnhamburger-line header-global__btnhamburger-line--top')
+        span(class='header-global__btnhamburger-line header-global__btnhamburger-line--bottom')
+    a(href="" class='header-global__linklogo')
+      div(class='header-global__logo-container')
+        img(src=logo.link class='header-global__logo-image')
+    nav(class='header-global__navigation')
+      ul(class='header-global__nav-wrapper')
+        each mainelement, i in links
+          if links[i].links !== undefined
+            li(class='header-global__nav-item')
+              div(class='header-global-nav-dropdown')
+                a(href="#" class='header-global-nav-dropdown__label')
+                 div(class='header-global__container-item')
+                  span(class='header-global__text-item')= links[i].label
+                  div(class='header-global__container-arrow')
+                    span(class='header-global__item-arrow header-global__item-arrow--lineleft')
+                    span(class='header-global__item-arrow header-global__item-arrow--lineright')
+                span(class='header-global-nav-dropdown__drawer')
+                  ul(class='header-global-nav-dropdown__links')
+                    each subelement, k in links[i].links
+                      li(class='header-global-nav-dropdown__link')= links[i].links[k].label
+        each mainelement, i in links
+          if links[i].links == undefined
+            li(class='header-global__nav-item')
+              div(class='header-global-nav-dropdown')
+                a(href="#" class='header-global-nav-dropdown__label')
+                 div(class='header-global__container-item')
+                  span(class='header-global__text-item')= links[i].label
+div(class='container')
+  div(class='container__initial-view')
+		  
+           
+       
+            
+
+  
