@@ -1,3 +1,5 @@
+@import './../../shared/mediaquery';
+
 .header-global{
 	max-width: 100vw;
 	width: 100%;
@@ -19,6 +21,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include respond-to(medium-screens) {display:none;}
+		@include respond-to(wide-screens) {display:none;}
 	}
 
 	&__btnhamburger{
@@ -54,6 +58,8 @@
 		left: calc(50% - 100px);
 		width: 200px;
 		height: 64px;
+		@include respond-to(medium-screens) {left: 100px;}
+		@include respond-to(wide-screens) {left: 100px;}
 	}
 
 	&__logo-container{
@@ -74,7 +80,7 @@
 		width: 100%;
 		display: inline-block;
 		transition: transform .3s cubic-bezier(.72,.09,.3,.94);
-		transform: translateX(-100vw) 
+		transform: translateX(0vw);
 	}
 
 	&__nav-wrapper{
@@ -83,12 +89,12 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		background-color: rgba(26, 2, 16, 0.938);	
+		background-color: rgba(26, 2, 16, 0.938);
 	}
 
 	&__nav-item{
 		list-style:none;
-		display: list-item;
+		display: list-item;	
 	}
 
 	&-nav-dropdown{
@@ -222,6 +228,7 @@
 		background-color: rgb(12, 3, 32);
 		overflow: hidden;
 		transition: transform .3s cubic-bezier(.72,.09,.3,.94);
+		@include respond-to(medium-screens) {transform: translate(100vw)}
 	}
 }
 
