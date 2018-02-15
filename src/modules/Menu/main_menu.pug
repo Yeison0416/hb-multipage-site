@@ -22,7 +22,11 @@ header(class='header-global')
                 span(class='header-global-nav-dropdown__drawer')
                   ul(class='header-global-nav-dropdown__links')
                     each subelement, k in links[i].links
-                      li(class='header-global-nav-dropdown__link')= links[i].links[k].label
+                      li(class='header-global-nav-dropdown__link')
+                        div(class='header-global-nav-dropdown')
+                          a(href="#" class='header-global-nav-dropdown__subitem')
+                            div(class='header-global__container-item header-global__container-item--subitem')
+                              span(class='header-global__text-subitem')= links[i].links[k].label
         each mainelement, i in links
           if links[i].links == undefined
             li(class='header-global__nav-item')
