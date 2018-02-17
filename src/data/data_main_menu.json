@@ -1,0 +1,76 @@
+{
+  "logo": {
+    "link": "http://d13jmf4ukq7yn1.cloudfront.net/jshop/images/Crystal%20Gardens%20Logo.png"
+  },
+
+  "imagenav":{
+    "link": "https://maplesymargaritas.com/media/catalog/product/cache/21/small_image/295x/040ec09b1e35df139433887a97daa66f/6/j/6j8d9778.jpg"
+  },
+
+  "links": [
+    {
+      "label": "Funeral",
+      "href": "#"
+    },
+    {
+      "label": "Love and Romance",
+      "links": [
+        {
+          "label": "dos uno",
+          "href": "#"
+        },
+        {
+          "label": "dosdos",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Anniversary",
+      "links": [
+        {
+          "label": "tresuno",
+          "href": "#"
+        },
+        {
+          "label": "tresdos",
+          "href": "#"
+        },
+        {
+          "label": "trestres",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Mothers",
+      "links": [
+        {
+          "label": "cuatrouno",
+          "href": "#"
+        },
+        {
+          "label": "cuatrodos",
+          "href": "#"
+        },
+        {
+          "label": "cuatrotres",
+          "href": "#"
+        },
+        {
+          "label": "cuatrocuatro",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Birthday",
+      "links": [
+        {
+          "label": "sisas",
+          "href": "#"
+        }
+      ]
+    }
+  ]
+}
