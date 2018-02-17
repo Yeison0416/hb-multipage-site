@@ -5,11 +5,15 @@
 	width: 100%;
 	height: 70px;
 	background-color: rgb(39, 195, 223);
+	@include respond-to(medium-screens) {height: 100px;}
+	@include respond-to(wide-screens) {height: 100px;}
+	
 
 	&__container{
 		width: 100%;
 		height: 100%;		
 		position: relative;
+		@include respond-to(wide-screens) {display: flex;	align-items: center; justify-content: center;}
 	 }
 
 	 &__container-btnhamburger{
@@ -21,7 +25,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		@include respond-to(medium-screens) {display:none;}
+		@include respond-to(medium-screens) {top: 15px; width: 70px; height: 70px;}
 		@include respond-to(wide-screens) {display:none;}
 	}
 
@@ -31,6 +35,7 @@
 		height: 20px;
 		border: none;
 		background-color: rgb(39, 195, 223);
+		@include respond-to(medium-screens) {width: 40px;}
 
 		&-line{
 			position: absolute;
@@ -39,6 +44,7 @@
 			border-radius: 6px;
 			background-color: black;
 			transition: transform .2s;
+			@include respond-to(medium-screens) {width: 100%;}
 
 			&--top{
 				top: 0;
@@ -58,8 +64,8 @@
 		left: calc(50% - 100px);
 		width: 200px;
 		height: 64px;
-		@include respond-to(medium-screens) {left: 100px;}
-		@include respond-to(wide-screens) {left: 100px;}
+		@include respond-to(medium-screens) {top:5px; height: 90px; width: 250px; left: calc(50% - 125px);}
+		@include respond-to(wide-screens) {top:5px; height: 90px; width: 250px; left: 5px;}
 	}
 
 	&__logo-container{
@@ -80,7 +86,8 @@
 		width: 100%;
 		display: inline-block;
 		transition: transform .3s cubic-bezier(.72,.09,.3,.94);
-		transform: translateX(0vw);
+		transform: translateX(-100vw);
+		@include respond-to(wide-screens) {transform: translateX(0); top:0;height: 100%; width: calc(100% - 260px); left: 260px; }
 	}
 
 	&__nav-wrapper{
@@ -90,11 +97,12 @@
 		left: 0;
 		top: 0;
 		background-color: rgba(26, 2, 16, 0.938);
+		@include respond-to(wide-screens) {display:flex; background-color: rgb(39, 195, 223);}
 	}
 
 	&__nav-item{
 		list-style:none;
-		display: list-item;	
+		display: list-item;
 	}
 
 	&-nav-dropdown{
@@ -104,6 +112,8 @@
 			display: flex;
 			align-items: center;
 			border-top: 1px solid #2c3b45;
+			@include respond-to(medium-screens) {height: 100px; width: 150px;}
+			@include respond-to(wide-screens) {height: 100px; width: 150px; border-top: 0px}
 		}
 
 		&__subitem{
@@ -111,12 +121,14 @@
 			height: 40px;
 			display: flex;
 			align-items: center;
+			@include respond-to(medium-screens) {height: 70px;}
 		}
 	
 		&__links{
 			overflow: hidden;
 			max-height: 0;
 			transition: max-height .2s cubic-bezier(.72,.09,.3,.94);
+			@include respond-to(wide-screens) {background-color: rgb(39, 195, 223)}
 		}
 	}
 
@@ -127,9 +139,12 @@
 		left: 20px;
 		display: flex;
 		align-items: center;
+		@include respond-to(medium-screens) {height: 70px; width: 400px;}
+		@include respond-to(wide-screens) {height: 100px; width: 150px;}
 
 		&--subitem{
 			left: 50px;
+			@include respond-to(wide-screens) {left: 20px;}
 		}
 	}
 
@@ -137,12 +152,15 @@
 		font-size: 25px;
 		font-weight: 500;
 		color: white;
+		@include respond-to(medium-screens) {font-size: 35px; font-weight: 800;}
 	}
 
 	&__text-subitem{
 		font-size: 25px;
 		font-weight: 400;
 		color: white;
+		@include respond-to(medium-screens) {font-size: 35px; font-weight: 700;}
+		@include respond-to(wide-screens) {color: white}
 	}
 
 	&__container-arrow{
@@ -150,6 +168,7 @@
 		width: 20px;
 		height: 20px;
 		margin-left: 5px;
+		@include respond-to(wide-screens) {display: none;}
 	}
 
 	&__item-arrow{
@@ -219,16 +238,32 @@
 
 .container{
 	overflow: hidden;
+	background-color: brown;
 
 	&__initial-view{
 		max-width: 100vw;
 		width: 100%;
 		height: calc(100vh - 70px);
 		transform: translate(0);
-		background-color: rgb(12, 3, 32);
+		background-color: black;
 		overflow: hidden;
+		
 		transition: transform .3s cubic-bezier(.72,.09,.3,.94);
-		@include respond-to(medium-screens) {transform: translate(100vw)}
+		@include respond-to(wide-screens) {transform: translate(100vw);}
+	}
+}
+
+.header-global-nav-dropdown:hover{
+	.header-global-nav-dropdown__links {
+		max-height: 400px;
+	}
+	.header-global__text-item{
+		color: black;
+	}
+}
+.header-global-nav-dropdown__link:hover{
+	.header-global__text-subitem{
+		color: black;
 	}
 }
 
@@ -239,5 +274,6 @@
 		}
 	}
 }
+
 
 
