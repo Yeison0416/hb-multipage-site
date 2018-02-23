@@ -1,0 +1,22 @@
+{
+    "header": "FLORAL DESIGNS",
+    "description": "Cristal Garden Florist deliver floral designs to your home. If are you search variety, quality , fulfillment, your is in the place correct. we have delivered more of 45.000 designs floral, cheering the day thousands of persons",
+    "cta": {
+      "label": "get it now",
+      "url": "#"
+    },
+    "images": {
+      "small": {
+        "url": "http://muchosnegociosrentables.com/wp-content/uploads/2016/06/C%C3%B3mo-montar-una-tienda-de-flores-artificiales.jpg",
+        "description": "picture for viewport small"
+      },
+      "medium": {
+        "url": "http://muchosnegociosrentables.com/wp-content/uploads/2016/06/C%C3%B3mo-montar-una-tienda-de-flores-artificiales.jpg",
+        "description": "picture for viewport medium"
+      },
+      "large": {
+        "url": "http://1.bp.blogspot.com/-RLicOI75le8/Uv_dzR9vqLI/AAAAAAAADGQ/Hgfe8ZZbcIQ/s1600/Florister%C3%ADa.jpg",
+        "description": "picture for viewport large"
+      }
+    }
+  }
