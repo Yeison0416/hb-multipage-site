@@ -5,4 +5,4 @@ import { ContentImage } from './modules/content-image/content_image'
 
 /* eslint-disable */
 const mainmenu = new Mainmenu(document.body)
-const contentImage = new ContentImage(document.querySelector('.content-image'))
+const contentImage = new ContentImage(document.querySelector('.container__content-image'))
